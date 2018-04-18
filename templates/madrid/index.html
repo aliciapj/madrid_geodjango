@@ -1,0 +1,17 @@
+{% if statistics %}
+    <table>
+        <tr>
+            <th>{{ entity }}</th>
+            <th>Multas</th>
+        </tr>
+        {% for stat in statistics %}
+        <tr>
+            <td>{{ stat.name }}</td>
+            <td>{{ stat.ticket_count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% else %}
+    No info available
+{% endif %}
